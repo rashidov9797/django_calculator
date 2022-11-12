@@ -1,0 +1,60 @@
+{% extends 'basic.html' %}
+{% load static  %}
+
+{% block content %}
+
+
+
+    <div class="container  pt-5 pb-5  text-center d-flex justify-content-between bg-transparent
+    mt-5">
+        <div class="col me-3  rounded border  border-light pt-5 pb-5 ">
+            <h1>Addition</h1>
+    <form action="add" method="POST">
+        {% csrf_token %}
+        <br><br>
+        <input placeholder="Enter first number:" type="text" name="num1"><br><br> <br>
+        <input placeholder="Enter second number: " type="text" name="num2"><br><br> <br>
+        <button type="submit" class="btn btn-success">Submit</button>
+    
+    
+    </form>
+        </div>
+        <div class="col  rounded  me-3 border border-light pt-5 pb-5">
+            
+    <h1>Subtraction</h1>
+    <form action="sub" method="POST">
+        {% csrf_token %}
+    
+        <br><br>
+        <input placeholder="Enter first number:" type="text" name="num1"><br><br> <br>
+        <input placeholder="Enter second number: " type="text" name="num2"><br><br> <br>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+        </div> 
+        <div class="col  rounded me-3 border border-light pt-5 pb-5">
+            <h1>Multiplication</h1>
+    <form action="multi" method="POST">
+        {% csrf_token %}
+    
+        <br><br>
+        <input placeholder="Enter first number:" type="text" name="num1"><br><br> <br>
+        <input placeholder="Enter second number: " type="text" name="num2"><br><br> <br>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+        </div>
+        <div class="col rounded me-3 border border-light pt-5 pb-5">
+            
+    <h1>Division</h1>
+    <form action="div" method="POST">
+        {% csrf_token %}
+    
+        <br><br>
+        <input placeholder="Enter first number:" type="text" name="num1"><br><br> <br>
+        <input placeholder="Enter second number: " type="text" name="num2"><br><br> <br>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+        </div>
+    </div>
+
+
+{% endblock %}
